@@ -1,5 +1,7 @@
 package org.sourceit;
 
+import org.sourceit.entities.Box;
+
 /**
  * Множеством называется совокупность некоторых элементов,
  * объединенных каким-либо общим признаком.
@@ -60,5 +62,30 @@ public interface Sets {
      * @return
      */
     Sets symmetricDifference(Sets sets);
+
+    /**
+     *
+     * @param box
+     */
+    void add(Box box);
+
+    /**
+     *
+     * @return
+     */
+    Box getBox();
+
+    /**
+     *
+     * @return
+     */
+    int size();
+
+    /**
+     *
+     */
+    void reset();
+
+    void sort();
 
 }

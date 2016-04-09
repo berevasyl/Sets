@@ -3,7 +3,7 @@ package org.sourceit.entities;
 /**
  * Just box.
  */
-public class Box {
+public class Box implements Comparable {
 
     private int width;
     private int height;
@@ -54,5 +54,13 @@ public class Box {
     @Override
     public int hashCode() {
         return 0;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Box temp = ((Box)o);
+        int volume = temp.getLength() * temp.getHeight() * temp.getWidth();
+        int myVolume = this.getHeight() * this.getLength() * this.getWidth();
+        return myVolume - volume;
     }
 }
